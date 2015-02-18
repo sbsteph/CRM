@@ -1,0 +1,6 @@
+<% if @customer.new_record? %>
+  $('input#customer_name').effect('highlight', { color: 'red' });
+<% else %>
+  $('div#customers').append("<%= escape_javascript(render @customer) %>");
+  $('div#<%= dom_id(@customer) %>').effect('highlight');
+<% end %>

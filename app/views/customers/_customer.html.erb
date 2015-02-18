@@ -1,0 +1,7 @@
+  <%= div_for customer do %>
+    <div class="actions">
+      <%= link_to customer.name, customer %>
+      <%= link_to 'edit', edit_customer_path(customer) %>
+      <%= link_to 'delete', customer, method: :delete, remote:true %>
+    </div>
+  <% end %>
